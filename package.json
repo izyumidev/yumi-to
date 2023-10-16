@@ -15,7 +15,7 @@
   "commands": [
     {
       "name": "from-clipboard",
-      "title": "New Shortlink from Clipboard",
+      "title": "New Shortlink From Clipboard",
       "description": "Create a new shortlink from the URL in your clipboard",
       "mode": "no-view"
     }
