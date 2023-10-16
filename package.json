@@ -2,9 +2,9 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "yumi-to",
   "title": "yumi.to",
-  "description": "URL shortner",
+  "description": "Raycast Extension for your URL shortner fork of yumi.to",
   "icon": "command-icon.png",
-  "author": "AppleYumi",
+  "author": "izyumi",
   "owner": "yumi",
   "categories": [
     "Productivity",
@@ -14,16 +14,38 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "New Shortlink",
-      "description": "",
-      "mode": "view"
+      "name": "from-clipboard",
+      "title": "New Shortlink from Clipboard",
+      "description": "Create a new shortlink from the URL in your clipboard",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "title": "Shortlink Domain",
+      "label": "Shortlink Domain (e.g. yumi.to)",
+      "required": true,
+      "type": "textfield",
+      "description": "The domain of your shortlink",
+      "name": "shortlink_domain"
+    },
+    {
+      "title": "Shortlink API Key",
+      "label": "Shortlink API Key",
+      "required": true,
+      "type": "password",
+      "description": "The API key of your shortlink",
+      "name": "shortlink_api_key"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.59.0"
+    "@raycast/api": "^1.59.0",
+    "@types/got": "^9.6.12",
+    "crypto-js": "^4.1.1",
+    "got": "^13.0.0"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.1.2",
     "@raycast/eslint-config": "1.0.5",
     "@types/node": "18.8.3",
     "@types/react": "18.0.9",
